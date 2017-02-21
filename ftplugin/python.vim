@@ -75,8 +75,8 @@ function! SlimuxEscape_python(text)
   endif
 
   "" Return the processed lines
-  if !l:at_indent0 && l:last_line_empty >= 0
-      " We ended at indentation and last line was empty
+  if !l:at_indent0
+      " We ended at indentation. Finish with extra linebreak
       return join(l:processed_lines,"").""
   else
       return join(l:processed_lines,"").""
